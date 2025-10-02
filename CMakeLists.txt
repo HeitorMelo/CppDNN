@@ -1,9 +1,11 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.5)
 
-project(EigenDNN)
+project(EigenDNN LANGUAGES CXX)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
-find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
 add_subdirectory(src)
-#add_subdirectory(example/simple_main)
